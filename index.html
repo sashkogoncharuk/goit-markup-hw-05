@@ -18,9 +18,21 @@
             <nav class="main-nav container">
                 <a href="./index.html" class="logo-header"><span class="logo-web">Web</span>Studio</a>
                 <ul class="nav-list">
-                    <li class="item"> <a href="./index.html" class="nav-link current">Студия</a></li>
-                    <li class="item"> <a href="./portfolio.html" class="nav-link">Портфолио</a></li>
-                    <li class="item"> <a href="#" class="nav-link link">Контакты</a></li>
+                    <li class="item"> 
+                        <a href="./index.html" class="nav-link current">
+                            Студия
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="./portfolio.html" class="nav-link">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="nav-link link">
+                            Контакты
+                        </a>
+                    </li>
                 </ul>
                 <ul class="contact-list">
                     <li class="item"><a href="mailto:info@devstudio.com" class="nav-link">
@@ -47,9 +59,18 @@
                     <br>
                     для вашего бизнеса
                 </h1>
-                <button type="button" class="button">Заказать услугу</button>
+                <button data-modal-open type="button" class="button">Заказать услугу</button>
             </div>
         </section>
+        <div data-modal class="backdrop is-hidden">
+            <div class="modal">
+                <button data-modal-close class="modal-button">
+                    <svg class="modal-icon" width="11" height="11">
+                        <use href="./images/sprite.svg#modal-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
         <!-- benefits section -->
         <section class="benefits">
             <div class="container benefits-section">
@@ -101,9 +122,21 @@
             <div class="container what-we-do-section"> 
                 <h2 class="what-we-do-title">Чем мы занимаемся</h2>
                 <ul class="what-we-do-list">
-                    <li class="item"><img src="./images/img1.jpeg" alt="programer" width="370"></li>
-                    <li class="item"><img src="./images/img2.jpeg" alt="designer" width="370"></li>
-                    <li class="item"><img src="./images/img3.jpeg" alt="artist" width="370"></li>
+                    <li class="item what-we-do-item"><img src="./images/img1.jpeg" alt="programer" width="370">
+                        <div class="what-we-do-description">
+                            <h3 class="what-we-do-text">Десктопные приложения</h3>
+                        </div>
+                    </li>
+                    <li class="item what-we-do-item"><img src="./images/img2.jpeg" alt="designer" width="370">
+                        <div class="what-we-do-description">
+                            <h3 class="what-we-do-text">Мобильные приложения</h3>
+                        </div>
+                    </li>
+                    <li class="item what-we-do-item"><img src="./images/img3.jpeg" alt="artist" width="370">
+                        <div class="what-we-do-description">
+                            <h3 class="what-we-do-text">Дизайнерские решения</h3>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -321,5 +354,8 @@
                 </div>
             </section>
     </footer>    
+
+    <script src="./js/modal.js"></script>
+
 </body>
 </html>
