@@ -690,9 +690,15 @@ ul {
 
 .portfolio-block {
   position: relative;
+  overflow: hidden;
 }
 
-.card-description {
+.card-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--hero-text-color);
   position: absolute;
   display: flex;
   left: 0;
@@ -703,14 +709,12 @@ ul {
   padding-left: 24px;
   align-items: center;
   background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.card-text {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  color: var(--hero-text-color);
+.portfolio-block:hover .card-text {
+  transform: translateY(0%);
 }
 
 /* links and list decoration */
